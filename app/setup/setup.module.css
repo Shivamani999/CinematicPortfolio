@@ -1,0 +1,218 @@
+.wrap {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(
+      120% 90% at 50% 0%,
+      rgba(255, 138, 61, 0.1) 0%,
+      rgba(6, 6, 10, 0) 45%
+    ),
+    linear-gradient(180deg, #06060a 0%, #0a0a12 100%);
+}
+
+.card {
+  width: 100%;
+  max-width: 40rem;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border-radius: 24px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(18px) saturate(150%);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.kicker {
+  margin: 0 0 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--warm-soft);
+  font-weight: 600;
+}
+
+.title {
+  margin: 0 0 0.7rem;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.sub {
+  margin: 0 0 2rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.drop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 1.6rem 1rem;
+  border-radius: 16px;
+  border: 1px dashed var(--glass-border);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.4s var(--ease-out), background 0.4s var(--ease-out);
+}
+
+.drop:hover {
+  border-color: rgba(255, 176, 102, 0.55);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.dropIcon {
+  font-size: 1.5rem;
+}
+
+.dropLabel {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--ink);
+  word-break: break-all;
+}
+
+.dropHint {
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.submit {
+  margin-top: 0.5rem;
+  height: 52px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: var(--warm);
+  color: #1a0e04;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.4s var(--ease-out), opacity 0.3s ease, filter 0.4s;
+}
+
+.submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.note {
+  margin: 1.2rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.noteError {
+  color: #ff9b8a;
+}
+
+.result {
+  margin-top: 1.8rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.resultTitle {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  color: #b8f5cf;
+}
+
+.summary {
+  margin: 0 0 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.summary > div {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 0.8rem;
+  font-size: 0.92rem;
+}
+
+.summary dt {
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  padding-top: 0.15rem;
+}
+
+.summary dd {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  color: var(--ink);
+  font-weight: 600;
+  transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 176, 102, 0.6);
+}
+
+.tip,
+.footer {
+  margin: 1.2rem 0 0;
+  font-size: 0.84rem;
+  color: var(--ink-faint);
+  line-height: 1.5;
+}
+
+.footer {
+  margin-top: 1.8rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.tip code,
+.footer code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82em;
+  padding: 0.12em 0.4em;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--warm-soft);
+}

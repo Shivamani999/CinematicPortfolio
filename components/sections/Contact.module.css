@@ -1,0 +1,107 @@
+.section {
+  position: relative;
+  z-index: 6;
+  background:
+    radial-gradient(
+      120% 90% at 50% 120%,
+      rgba(255, 138, 61, 0.14) 0%,
+      rgba(6, 6, 10, 0) 55%
+    ),
+    #06060a;
+  padding: clamp(5rem, 16vh, 11rem) clamp(1.5rem, 6vw, 7rem) clamp(2rem, 5vh, 3rem);
+}
+
+.inner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.kicker {
+  margin: 0 0 clamp(1.4rem, 4vh, 2.4rem);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--warm-soft);
+  font-weight: 600;
+}
+
+.heading {
+  margin: 0 0 1.4rem;
+  font-size: clamp(2.2rem, 7vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  color: var(--ink);
+  max-width: 18ch;
+}
+
+.copy {
+  margin: 0 0 clamp(2.4rem, 6vh, 3.6rem);
+  max-width: 38rem;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: clamp(1.3rem, 3.4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  transition: gap 0.45s var(--ease-out), color 0.45s var(--ease-out);
+}
+
+.email svg {
+  color: var(--warm-soft);
+  transition: transform 0.45s var(--ease-out);
+}
+
+.email:hover {
+  color: var(--warm-soft);
+}
+
+.email:hover svg {
+  transform: translateX(6px);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: clamp(4rem, 12vh, 8rem);
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+.socials {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.social {
+  position: relative;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  transition: color 0.4s var(--ease-out);
+}
+
+.social:hover {
+  color: var(--warm-soft);
+}
+
+@media (max-width: 540px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

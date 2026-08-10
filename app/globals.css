@@ -1,0 +1,54 @@
+:root {
+  /* Cinematic palette */
+  --bg: #06060a;
+  --bg-2: #0a0a12;
+  --ink: #f4f1ea;
+  --ink-soft: rgba(244, 241, 234, 0.66);
+  --ink-faint: rgba(244, 241, 234, 0.42);
+
+  /* Warm practical light + cool monitor glow */
+  --warm: #ff8a3d;
+  --warm-soft: #ffb066;
+  --cool: #5b8cff;
+
+  /* Glass */
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-strong: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.14);
+
+  /* Easing tokens (premium, slow) */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

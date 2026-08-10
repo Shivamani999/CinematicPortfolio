@@ -1,0 +1,26 @@
+{
+  "name": "cinematic-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A premium, cinematic Next.js portfolio hero with a talking-head video background, Three.js bokeh particles, and GSAP motion.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "setup": "node scripts/setup.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "mammoth": "^1.8.0",
+    "next": "^14.2.35",
+    "pdf-parse": "^1.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.160.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^16.3.0"
+  }
+}
