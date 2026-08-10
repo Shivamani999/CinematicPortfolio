@@ -578,46 +578,7 @@
     bottom: 1rem;
   }
 }
-    background:
-      linear-gradient(
-        180deg,
-        rgba(6, 6, 10, 0.35) 0%,
-        rgba(6, 6, 10, 0) 32%,
-        rgba(6, 6, 10, 0.55) 66%,
-        rgba(6, 6, 10, 0.95) 100%
-      ),
-      radial-gradient(
-        90% 60% at 16% 92%,
-        rgba(255, 138, 61, 0.18) 0%,
-        rgba(255, 138, 61, 0) 60%
-      );
-  }
 
-  .content {
-    left: 1.4rem;
-    right: 1.4rem;
-    top: auto;
-    bottom: clamp(7rem, 20vh, 10rem);
-    transform: none;
-    max-width: none;
-  }
-
-  .controls {
-    right: 1.1rem;
-    bottom: 6.5rem;
-  }
-
-  .glassBtn {
-    width: 44px;
-    height: 44px;
-  }
-
-  .soundHint {
-    height: 44px;
-  }
-
-  .scroll {
-    bottom: 1.4rem;
   }
 
   .scrollLine {
