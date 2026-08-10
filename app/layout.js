@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Surya Teja — Software Engineer · Full Stack Developer",
+  title: "Konam Shivamani — Senior Software Engineer · AI Automation Engineer SDET",
   description:
-    "Surya Teja — Software Engineer and Full Stack Developer. A cinematic portfolio with Java, Grails, Jenkins, Python, and AWS.",
+    "Konam Shivamani — Senior Software Engineer and AI Automation Engineer. A cinematic portfolio with Java, Grails, Jenkins, Python, and AWS.",
 };
 
 export const viewport = {
