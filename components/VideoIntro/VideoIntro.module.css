@@ -635,6 +635,49 @@
   }
 }
 
+/* extra small phones: reduce sizes to avoid cutoff */
+@media (max-width: 420px) {
+  .hero .content {
+    margin-top: min(40vh, 220px);
+    padding: 0.8rem;
+  }
+
+  .hero .name {
+    font-size: clamp(1.4rem, 10vw, 2.6rem);
+  }
+
+  .hero .line {
+    font-size: clamp(1.4rem, 9.5vw, 2.8rem);
+  }
+
+  .hero .role {
+    font-size: 0.85rem;
+  }
+
+  .hero .stack {
+    gap: 0.35rem;
+  }
+
+  .actions {
+    gap: 0.6rem;
+  }
+
+  .btnPrimary,
+  .btnGhost {
+    height: 44px;
+    padding: 0 0.9rem;
+  }
+
+  .controls {
+    right: 0.6rem;
+    bottom: 0.6rem;
+  }
+
+  .video {
+    min-height: 40vh;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .soundPulse,
   .scrollPulse,
