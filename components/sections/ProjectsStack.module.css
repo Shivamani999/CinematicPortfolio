@@ -226,17 +226,50 @@
 }
 
 @media (max-width: 760px) {
+  .stack {
+    min-height: auto;
+    padding-top: 0;
+  }
+
   .card {
-    padding: 1.1rem;
-  min-height: 100vh;
+    position: relative;
+    inset: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: auto;
+    width: 100%;
+    margin: 0 0 1.75rem;
+    padding: 1.25rem;
+  }
+
+  .card::before {
+    border-radius: 1.5rem;
   }
 
   .cardTop {
     flex-direction: column;
     gap: 0.65rem;
+    align-items: flex-start;
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
   }
 
   .description {
     font-size: 0.92rem;
+  }
+
+  .cardMedia {
+    margin: 1.5rem 0 0;
+  }
+
+  .skillSections {
+    grid-template-columns: 1fr;
+  }
+
+  .profileSummary {
+    padding: 1.2rem 1rem;
   }
 }
