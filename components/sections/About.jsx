@@ -14,7 +14,7 @@ export default function About() {
       title: "About · Skills",
       role: "Core skills",
       description: "Specializes in Python, Selenium, Playwright, Appium, REST Assured, Jenkins, BrowserStack, and Generative AI workflows for faster, more reliable test development.",
-      tags: siteConfig.stack.slice(0, 6),
+      tags: siteConfig.stack.slice(0, 0),
       sections: [
         {
           heading: "Languages",
