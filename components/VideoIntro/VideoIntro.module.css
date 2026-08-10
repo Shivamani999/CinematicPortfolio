@@ -3,6 +3,7 @@
    ────────────────────────────────────────────────────────────── */
 .hero {
   position: relative;
+  min-height: 100svh;
   height: 100svh;
   width: 100%;
 }
@@ -138,6 +139,7 @@
   top: 64%;
   transform: translateY(-50%);
   max-width: min(92vw, 44rem);
+  width: min(92vw, 44rem);
 }
 
 /* Open-to-work badge */
@@ -498,7 +500,84 @@
     object-position: center 24%;
   }
 
-  .gradient {
+  .content {
+    left: 1.4rem;
+    right: 1.4rem;
+    top: auto;
+    bottom: clamp(7rem, 20vh, 10rem);
+    transform: none;
+    max-width: none;
+    width: auto;
+    padding: 0;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    gap: 0.85rem;
+  }
+
+  .btnPrimary,
+  .btnGhost {
+    min-width: 0;
+  }
+
+  .controls {
+    right: 1.1rem;
+    bottom: 6.5rem;
+  }
+
+  .glassBtn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .soundHint {
+    height: 44px;
+  }
+
+  .scroll {
+    bottom: 1.4rem;
+  }
+
+  .scrollLine {
+    height: 42px;
+  }
+
+  .name {
+    font-size: clamp(2rem, 7vw, 4.2rem);
+  }
+
+  .role {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+  }
+}
+
+@media (max-width: 540px) {
+  .content {
+    left: 1rem;
+    right: 1rem;
+    bottom: 4.5rem;
+  }
+
+  .line {
+    font-size: clamp(1.9rem, 9vw, 3.4rem);
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btnPrimary,
+  .btnGhost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .scroll {
+    bottom: 1rem;
+  }
+}
     background:
       linear-gradient(
         180deg,
