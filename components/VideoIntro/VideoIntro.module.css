@@ -611,6 +611,30 @@
   }
 }
 
+/* Strong mobile override: push content below the portrait to avoid overlapping face */
+@media (max-width: 700px) {
+  .hero .content {
+    /* push the landing content lower so it doesn't sit on the face */
+    margin-top: min(55vh, 320px);
+    position: relative;
+    transform: none;
+    left: auto;
+    right: auto;
+    width: min(92vw, 640px);
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(6,6,10,0.0), rgba(6,6,10,0.02));
+  }
+
+  /* nudge the video frame slightly upward so the face sits above the content area */
+  .hero .video {
+    object-position: center 12% !important;
+  }
+
+  .hero .name {
+    font-size: clamp(1.8rem, 9vw, 3.2rem);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .soundPulse,
   .scrollPulse,
