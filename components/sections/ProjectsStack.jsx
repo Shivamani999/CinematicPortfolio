@@ -99,6 +99,10 @@ export default function ProjectsStack({ projects = DEFAULT_PROJECTS, id, eyebrow
     if (!wrapper || cards.length === 0) return;
 
     const maxCardHeight = Math.max(...cards.map((card) => card.offsetHeight));
+    // enforce equal heights for all cards so the stacked animation is visually consistent
+    cards.forEach((card) => {
+      card.style.height = `${maxCardHeight}px`;
+    });
     const stackHeightValue = maxCardHeight + CARD_GAP * (totalCards - 1);
     wrapper.style.height = `${stackHeightValue}px`;
     setStackHeight(stackHeightValue);
@@ -140,9 +144,11 @@ export default function ProjectsStack({ projects = DEFAULT_PROJECTS, id, eyebrow
       </div>
 
       <div ref={wrapperRef} className={styles.stack} style={{ height: stackHeight ? `${stackHeight}px` : "auto" }}>
-        {projects.map((project, index) => (
+        {projects.map((project, index) => {
+          const simplifiedTitle = project.title && project.title.includes("·") ? project.title.split("·").pop().trim() : project.title;
+          return (
           <article
-            key={project.title}
+            key={project.title + index}
             ref={addCardRef}
             style={{ top: `${index * CARD_GAP}px`, zIndex: index }}
             className={styles.card}
@@ -151,7 +157,7 @@ export default function ProjectsStack({ projects = DEFAULT_PROJECTS, id, eyebrow
               <div className={styles.cardTop}>
                 <div>
                   <p className={styles.role}>{project.role}</p>
-                  <h4 className={styles.title}>{project.title}</h4>
+                  <h4 className={styles.title}>{simplifiedTitle}</h4>
                 </div>
                 <span className={styles.counter}>
                   {String(index + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
@@ -217,7 +223,8 @@ export default function ProjectsStack({ projects = DEFAULT_PROJECTS, id, eyebrow
               </div>
             </div>
           </article>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
