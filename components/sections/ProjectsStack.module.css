@@ -48,12 +48,10 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 40rem;
-  border: 2px solid transparent;
-  border-image: linear-gradient(90deg, var(--warm), var(--cool)) 1;
-  border-image-slice: 1;
-  /* rounded corners */
+  /* gradient ring as background + inner padding via pseudo */
+  background: linear-gradient(90deg, var(--warm), var(--cool));
   border-radius: 1.6rem;
-  padding: 1.4rem;
+  padding: 2px; /* thickness of the gradient ring */
   margin-bottom: 0;
   background-color: rgba(12, 12, 12, 0.95);
   box-shadow: 0 22px 80px rgba(0, 0, 0, 0.28);
@@ -65,9 +63,10 @@
 .card::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.08);
-  border-radius: inherit;
+  /* sit inside the gradient ring so the ring remains visible */
+  inset: 2px;
+  background: rgba(12, 12, 12, 0.95);
+  border-radius: calc(1.6rem - 2px);
   transition: background 0.25s ease;
   z-index: 0;
 }
@@ -93,6 +92,8 @@
   opacity: 1;
   transform: translateY(0);
   transition: none;
+  padding: 1.4rem; /* inner spacing inside the gradient ring */
+  border-radius: calc(1.6rem - 2px);
 }
 
 .card:hover .cardContent,
