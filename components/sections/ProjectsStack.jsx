@@ -159,8 +159,8 @@ export default function ProjectsStack({ projects = DEFAULT_PROJECTS, id, eyebrow
                   <p className={styles.role}>{project.role}</p>
                   <h4 className={styles.title}>{simplifiedTitle}</h4>
                 </div>
-                <span className={styles.counter}>
-                  {String(index + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
+                <span className={styles.counter} aria-hidden="false">
+                  {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
             
